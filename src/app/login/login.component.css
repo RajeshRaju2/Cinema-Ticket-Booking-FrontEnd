@@ -1,0 +1,17 @@
+.formpg{
+    width:300px; 
+    margin: auto;
+    display: block;
+    border-radius: 10%;
+    background-color: aquamarine;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  #im1{
+    width:50%; 
+    height:50%; 
+    border-radius:50%;
+    margin: auto;
+    display: block;
+}

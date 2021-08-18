@@ -1,0 +1,27 @@
+<div class="formpg">
+        <h1 style="text-align: center;">Login</h1>
+     <div class="img-container">
+     <img id="im1" src="assets/images/avatar.png">
+     </div>
+     <div class="form-group">
+         <label>Email</label>
+      <input type="text" class="form-control" placeholder="Enter your email" name="email" [(ngModel)]="logcred.email" >
+     </div>
+     {{logcred.email}}
+     <div class="form-group">
+         <label>Password</label>
+      <input type="password" class="form-control" placeholder="Enter your password" name="password" [(ngModel)]="logcred.password" >
+     </div>
+     {{logcred.password}}
+
+    <div class="form-group">
+    <button type="submit" name="log" class="button" (click)="validateUser()" style="display: grid;margin: auto;">Login</button>
+    </div>
+         <a href="" style="color: red;">Forgot Password?</a>
+     <br>
+     <br>
+     New User?
+    <a routerLink="/register" routerLinkActive="active">Register</a>
+    <br>
+    <br>
+    </div>

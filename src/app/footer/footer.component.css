@@ -1,0 +1,74 @@
+.social-media li{
+	display:inline-flex;
+	justify-content:center;
+	
+}
+.social-media li a{
+    display:flex;
+    height:40px;
+    width:40px;
+    margin:8px 15px;
+    justify-content:center;
+    align-items:center;
+    background-color:rgb(70,70,70);
+    border-radius:8px;
+    box-shadow:6px 6px 10px -1px rgba(0,0,0,0.15),
+            -6px -6px 10px -1px rgba(255,255,255,0.7);
+    border: 1px solid rgba(0,0,0,0);
+    transition:transform 0.5s;
+                    
+}
+.social-media li a i{
+    font-size:25px;
+    color:white;
+    transition:transform 0.5s;
+}
+.social-media li a:hover{
+    box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+    inset -4px -4px 6px -1px rgba(255,255,255,0.7),
+    -0.5px -0.5px 0px rgba(255,255,255,1),
+    0.5px 0.5px 0px rgba(0,0,0,0.15),
+    0px 12px 10px -10px rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.01);
+    transform: translateY(2px);
+}
+.social-media li a:hover i{
+    transform:scale(0.80);
+}
+.social-media li a:hover .fa-facebook{
+    color:#3b5998;
+}
+.social-media li a:hover .fa-instagram{
+    color:#f14843;
+}
+.social-media li a:hover .fa-twitter{
+    color:#00acee;
+}
+.social-media li a:hover .fa-telegram{
+    color:blue;
+}
+.social-media li a:hover .fa-youtube{
+    color:red;
+}
+.social-media li a:hover .fa-whatsapp{
+    color:green;
+}
+
+.contact-us{
+	line-height: 30px;
+}
+.contact-us li{
+	padding-left: 15px;
+}
+    
+.container .text1,.text2,.text1 p,.text2 p{
+    margin-top:20px;
+    line-height:25px;
+    letter-spacing:2px;
+}
+.container .text1{
+    margin-top:40px;
+}
+.copyright{
+    background-color: black;
+}
