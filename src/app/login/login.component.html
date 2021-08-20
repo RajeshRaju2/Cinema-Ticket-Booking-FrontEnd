@@ -5,12 +5,12 @@
      </div>
      <div class="form-group">
          <label>Email</label>
-      <input type="text" class="form-control" placeholder="Enter your email" name="email" [(ngModel)]="logcred.email" >
+      <input type="text" class="form-control" placeholder="Enter your email" name="email" [(ngModel)]="logcred.email" required>
      </div>
      {{logcred.email}}
      <div class="form-group">
          <label>Password</label>
-      <input type="password" class="form-control" placeholder="Enter your password" name="password" [(ngModel)]="logcred.password" >
+      <input type="password" class="form-control" placeholder="Enter your password" name="password" [(ngModel)]="logcred.password" required>
      </div>
      {{logcred.password}}
 
@@ -23,5 +23,7 @@
      New User?
     <a routerLink="/register" routerLinkActive="active">Register</a>
     <br>
+    <small class="text-danger">{{msg}}</small>
     <br>
     </div>
+ 

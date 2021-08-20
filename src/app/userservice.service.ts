@@ -1,5 +1,5 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 import { User } from './User';
@@ -10,7 +10,11 @@ import { User } from './User';
 })
 export class UserserviceService {
   private resturl: string = 'http://localhost:8080/rll/user';
-
+  $isLoggedIn=new EventEmitter();
+  
+  logIn(user:any){
+    this.$isLoggedIn.emit(user);
+  }
 
   constructor(private http: HttpClient) {}
   
@@ -59,6 +63,7 @@ export class UserserviceService {
 
       
       validateUser(user:any):Observable<User>{
+        
         return this.http.post<User>(this.resturl + '/validateUser',JSON.stringify(user),this.httpOptions).pipe(retry(1),catchError(this.handleError));
        }
   

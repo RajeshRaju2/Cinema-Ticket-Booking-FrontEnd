@@ -1,7 +1,5 @@
-import { isNull } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { isEmpty } from 'rxjs/operators';
 import { UserserviceService } from '../userservice.service';
 
 @Component({
@@ -12,21 +10,32 @@ import { UserserviceService } from '../userservice.service';
 export class LoginComponent implements OnInit {
 
 public logcred:any = {email:'',password:''};
+msg='';
+checking:any = {email:'',password:''};
+
 
   constructor(public router:Router,public aroute:ActivatedRoute,public service:UserserviceService) { }
 
   ngOnInit(): void {
+    
   }
 
   validateUser(){
-    this.service.validateUser(this.logcred).subscribe((data:{}) => (this.logcred = data));
- if(this.logcred.hasOwnProperty('email'))
-  {
-    this.router.navigate(['/home']);
-    }else{
+
+this.service.validateUser(this.logcred).subscribe(data=>(this.checking=data));
+
+    if(this.checking.email == ""  &&  this.checking.password == "" ){
       this.router.navigate(['/login']);
+     this.msg="Invalid Username or Password";
+    }else{
+      this.router.navigate(['/home']);
       
     }
+    console.log(this.checking);
+    this.service.logIn(this.checking);
   }
-
+  
 }
+
+
+

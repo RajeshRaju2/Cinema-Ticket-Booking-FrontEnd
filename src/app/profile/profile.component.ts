@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { UserserviceService } from '../userservice.service';
+
 
 @Component({
   selector: 'profile',
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-
-  constructor() { }
+newResult:any={};
+  constructor(private service:UserserviceService) { }
 
   ngOnInit(): void {
+this.service.$isLoggedIn.subscribe(data=>(this.newResult=data));
   }
-
+updateUser(){
+  console.log(this.newResult);
+  
+}
 }

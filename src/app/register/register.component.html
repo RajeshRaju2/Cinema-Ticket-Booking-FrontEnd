@@ -2,11 +2,11 @@
 <div>
     <div class="form-group">
       <label for="name">First Name:</label>
-      <input type="text" class="form-control" id="name" name="rgfname" [(ngModel)]="userDetail.fname">
+      <input type="text" class="form-control" id="name" name="rgfname" [(ngModel)]="userDetail.fname" >
     </div>
       <div class="form-group">
       <label for="name">Last Name:</label>
-      <input type="text" class="form-control" id="name" name="rglname" [(ngModel)]="userDetail.lname">
+      <input type="text" class="form-control" id="name" name="rglname" [(ngModel)]="userDetail.lname" >
     </div>
 
     <div class="form-group">
@@ -23,17 +23,17 @@
    
     <div class="form-group">
       <label for="email">Email address:</label>
-      <input type="email" class="form-control" id="email" name="rgmail" [(ngModel)]="userDetail.email">
+      <input type="email" class="form-control" id="email" name="rgmail" [(ngModel)]="userDetail.email" >
     </div>
     
     <div class="form-group">
       <label for="pwd">Password:</label>
-      <input type="password" class="form-control" id="pwd" name="rgpwd" [(ngModel)]="userDetail.password">
+      <input type="password" class="form-control" id="pwd" name="rgpwd" [(ngModel)]="userDetail.password" >
     </div>
   
     <div class="form-group">
       <label for="phone">Contact No.:</label>
-      <input type="number" class="form-control" id="phone" name="rgphone" [(ngModel)]="userDetail.phone">
+      <input type="number" class="form-control" id="phone" name="rgphone" [(ngModel)]="userDetail.phone" >
     </div>
     <div class="form-group">
     <button type="submit" (click)="newUser()" class="btn btn-primary" style="display: grid;margin: auto;">Submit</button>
