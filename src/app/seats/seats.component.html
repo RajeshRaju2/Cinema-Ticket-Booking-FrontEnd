@@ -1,9 +1,10 @@
-   <div class="inputForm" style="margin: auto;">
+<body class="cinemabgcolor">
+<div class="inputForm" style="margin: auto;">
     
-      Name *: <input type="text" id="Username" required>
-      Number of Seats *: <input type="number" id="Numseats" required>
+      Name: <input type="text" id="Username" required >
+      Number of Seats: <input type="number" id="Numseats" required>
       <br/><br/>
-      <button onclick="takeData()">Start Selecting</button>
+      <button onclick="takeData()" style="margin-left: 223px;">Start Selecting</button>
     
     </div>
       
@@ -13,7 +14,7 @@
     <table id="seatsBlock">
      <p id="notification"></p>
       <tr>
-        <td colspan="14"><div class="screen">SCREEN</div></td>
+        <td colspan="14"><div class="screen screenfont"><b><i>SCREEN</i></b></div></td>
         <td rowspan="20">
           <div class="smallBox greenBox">Selected Seat</div> <br/>
           <div class="smallBox redBox">Reserved Seat</div><br/>
@@ -215,13 +216,13 @@
       
     </table>
       
-    <br/><button onclick="updateTextArea()">Confirm Selection</button>
+    <br/><button onclick="updateTextArea()" style="margin-left: 223px;">Confirm Selection</button>
     
     </div>
           
     <br/><br/>
     
-    <div class="displayerBoxes" style="margin: auto;">
+    <div class="displayerBoxes" style="margin-left: 81px;">
     
       <table class="Displaytable">
       <tr>
@@ -237,5 +238,5 @@
     </table>
     
     </div>
-    
+  </body>
      

@@ -3,6 +3,20 @@
     width:400px; 
     margin: auto;
     display: block;
-    background-color: aquamarine;
+    background-color: black;
     padding: 30px;
   }
+
+.fontcolor{
+  color: white;
+}
+  .margin{
+    padding-left: 500px;
+    padding-right: 504px;
+    margin-top: 50px;
+  }
+ 
+  .radio-margin{
+    margin-left: 7px;
+  }
+  

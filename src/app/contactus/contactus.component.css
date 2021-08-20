@@ -16,6 +16,10 @@
   .adrs li i{
     font-size: 20px;
   }
+  .footercolor{
+    background-color: midnightblue;
+    color: white;
+  }
 
 
   /* url("./assets/images/tnkng.jpg")  */

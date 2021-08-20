@@ -1,45 +1,48 @@
- <h1 style="text-align: center;">Register</h1>
-<div>
+ <div style="background-color:black;">
+ <h1 class="fontcolor" style="text-align: center;"><b><i>Register</i></b></h1>
+<div class="margin fontcolor">
     <div class="form-group">
-      <label for="name">First Name:</label>
-      <input type="text" class="form-control" id="name" name="rgfname" [(ngModel)]="userDetail.fname" >
+      <label for="name"><i><b>First Name:</b></i></label>
+      <input type="text" class="form-control " id="name" name="rgfname" [(ngModel)]="userDetail.fname" >
     </div>
       <div class="form-group">
-      <label for="name">Last Name:</label>
-      <input type="text" class="form-control" id="name" name="rglname" [(ngModel)]="userDetail.lname" >
+      <label for="name"><b><i>Last Name:</i></b></label>
+      <input type="text" class="form-control " id="name" name="rglname" [(ngModel)]="userDetail.lname" >
     </div>
 
     <div class="form-group">
-      <label for="lblgender">Gender </label> <br/>
+      <label for="lblgender"><b><i>Gender</i></b> </label> <br/>
       <div class="form-check-inline">
       
-      <label class="form-check-label" for="lblrdmale"> Male </label>
-      <input class="form-check-input" type="radio" name="gender" id="lblgender" value="Male" [(ngModel)]="userDetail.gender" checked> 
+      <label class="form-check-label" for="lblrdmale"> <b><i>Male</i></b> </label>
+      <input class="form-check-input radio-margin" type="radio" name="gender" id="lblgender" value="Male" [(ngModel)]="userDetail.gender" checked> 
     
-      <label class="form-check-label" for="lblrdfemale"> Female </label>
-      <input class="form-check-input" type="radio" name="gender" id="lblgender" value="Female" [(ngModel)]="userDetail.gender"> 
+      <label class="form-check-label radio-margin" for="lblrdfemale"> <b><i>Female</i></b> </label>
+      <input class="form-check-input radio-margin" type="radio" name="gender" id="lblgender" value="Female" [(ngModel)]="userDetail.gender"> 
 </div>
 </div>
    
     <div class="form-group">
-      <label for="email">Email address:</label>
-      <input type="email" class="form-control" id="email" name="rgmail" [(ngModel)]="userDetail.email" >
+      <label for="email"><b><i>Email address:</i></b></label>
+      <input type="email" class="form-control " id="email" name="rgmail" [(ngModel)]="userDetail.email" >
     </div>
     
     <div class="form-group">
-      <label for="pwd">Password:</label>
-      <input type="password" class="form-control" id="pwd" name="rgpwd" [(ngModel)]="userDetail.password" >
+      <label for="pwd"><b><i>Password:</i></b></label>
+      <input type="password" class="form-control " id="pwd" name="rgpwd" [(ngModel)]="userDetail.password" >
     </div>
   
     <div class="form-group">
-      <label for="phone">Contact No.:</label>
-      <input type="number" class="form-control" id="phone" name="rgphone" [(ngModel)]="userDetail.phone" >
+      <label for="phone"><b><i>Contact No.:</i></b></label>
+      <input type="number" class="form-control " id="phone" name="rgphone" [(ngModel)]="userDetail.phone" >
     </div>
+
     <div class="form-group">
     <button type="submit" (click)="newUser()" class="btn btn-primary" style="display: grid;margin: auto;">Submit</button>
   </div>
   <br>
   
-    <a routerLink="/login">Login</a>
+    <a routerLink="/login"><b><i>Login</i></b></a>
 
   </div>
+</div>
