@@ -11,13 +11,15 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ContactusComponent } from './contactus/contactus.component';
-import { AboutusComponent } from './aboutus/aboutus.component';
 import { UserserviceService } from './userservice.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { BookingComponent } from './booking/booking.component';
 import { SeatsComponent } from './seats/seats.component';
 import { PaymentComponent } from './payment/payment.component';
+import { BookingDetailsComponent } from './booking-details/booking-details.component';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { TicketsComponent } from './tickets/tickets.component';
 
 @NgModule({
   declarations: [
@@ -30,10 +32,12 @@ import { PaymentComponent } from './payment/payment.component';
     RegisterComponent,
     ProfileComponent,
     ContactusComponent,
-    AboutusComponent,
     BookingComponent,
     SeatsComponent,
-    PaymentComponent
+    PaymentComponent,
+    BookingDetailsComponent,
+    AdminLoginComponent,
+    TicketsComponent
   ],
   imports: [
     BrowserModule,

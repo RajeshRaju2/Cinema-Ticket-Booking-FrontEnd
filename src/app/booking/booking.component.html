@@ -1,30 +1,60 @@
-<form>
+<div class="body" > 
+
+  <h1 style="text-align: center;padding-top: 25px;padding-bottom: 25px;"><b><i>Booking Details</i></b></h1>
+
+<div class="row">
+  <div class="left">
+      <img src="assets/images/{{details.img}}.jpg" alt="pro" style="width:450px;height: 450px;">
+      <h3 style="padding-top: 18px;"><b>PRICE : </b><span class="badge badge-secondary">Rs 100</span></h3>
+  </div>
+  <div class="right">
+
+
     <div class="form-group">
-      <label for="exampleFormControlInput1">Name</label>
-      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-    </div>
-    <div class="form-group">
-        <label for="exampleFormControlInput1">Movie Name</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        <label for="movieName">Movie Name</label>
+        <input type="text" class="form-control" id="movieName" name="movieName"  value="{{details.movie}}"  readonly="true">
       </div>
       <div class="form-group">
-        <label for="exampleFormControlInput1">Phone Number</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        <label for="language">Language</label>
+        <input type="text" class="form-control" id="language" name="language" value="{{details.language}}"  readonly="true">
       </div>
       <div class="form-group">
-        <label for="exampleFormControlInput1">Area</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        <label for="showDate" style="margin-right: 18px;">Show Date:</label>
+
+        <select name="showDate" id="showDate" [(ngModel)]="bookingDetails.showDate" >
+          <option value="25/08/21" >25/08/21</option>
+          <option value="26/08/21" >26/08/21</option>
+          <option value="27/08/21" >27/08/21</option>
+        </select> 
       </div>
       <div class="form-group">
-        <label for="exampleFormControlInput1">No. of Adults</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        <label for="startTime" style="margin-right: 18px;">Show Time:</label>
+
+        <select name="startTime" id="startTime" [(ngModel)]="bookingDetails.startTime">
+          <option value="9:00am"  >9:00 am</option>
+          <option value="12:00pm" >12:00 pm</option>
+          <option value="3:00pm"  >3:00 pm</option>
+          <option value="6:00pm"  >6:00 pm</option>
+        </select> 
       </div>
       <div class="form-group">
-        <label for="exampleFormControlInput1">No. of Childrens</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        <label for="noOfSeats">No. of seats</label>
+        <input type="number" class="form-control" id="noOfSeats" name="noOfSeats" placeholder="Select no. of seats" min="0" oninput="this.value = Math.abs(this.value)" [(ngModel)]="nos" >
+      </div>
+      <div class="form-group">
+        <label for="amount">Total Amount</label>
+        <input type="text" class="form-control" name="amount" id="amount" value="{{nos*100}}"  readonly="true">
       </div>
     <div class="form-group">
 <button type="submit" (click)=bookTicket() class="btn btn-outline-success">Book Ticket</button>
-<button type="submit" (click)=reset() class="btn btn-outline-danger">Reset</button>
 </div>
-    </form>
+  </div>
+</div>
+
+</div>
+
+
+
+
+
+

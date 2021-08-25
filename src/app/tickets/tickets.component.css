@@ -1,0 +1,16 @@
+.ticket{
+    width: 35%;
+    height:300px;
+    background-image: url(src\assets\images\Exit-Ticket.png);
+    background-repeat: no-repeat;
+    font-style: italic;
+    margin: auto;
+    display: block;
+    padding-left:30px;
+    padding-top: 18px;
+    padding-bottom: 10px;
+}
+.box{
+    padding-left:60px;
+    padding-top: 15px;
+}

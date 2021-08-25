@@ -1,48 +1,56 @@
- <div style="background-color:black;">
- <h1 class="fontcolor" style="text-align: center;"><b><i>Register</i></b></h1>
-<div class="margin fontcolor">
-    <div class="form-group">
-      <label for="name"><i><b>First Name:</b></i></label>
-      <input type="text" class="form-control " id="name" name="rgfname" [(ngModel)]="userDetail.fname" >
-    </div>
-      <div class="form-group">
-      <label for="name"><b><i>Last Name:</i></b></label>
-      <input type="text" class="form-control " id="name" name="rglname" [(ngModel)]="userDetail.lname" >
-    </div>
+<div >
+  <form class="reg" #userForm="ngForm" (ngSubmit)="userForm.value">
+  <h1 style="text-align: center;"><b><i>Register</i></b></h1>
 
-    <div class="form-group">
-      <label for="lblgender"><b><i>Gender</i></b> </label> <br/>
-      <div class="form-check-inline">
-      
-      <label class="form-check-label" for="lblrdmale"> <b><i>Male</i></b> </label>
-      <input class="form-check-input radio-margin" type="radio" name="gender" id="lblgender" value="Male" [(ngModel)]="userDetail.gender" checked> 
+     <div class="form-group">
+       <label for="name"><i><b>First Name:</b></i></label>
+       <input required #fname="ngModel" type="name" class="form-control " id="name" name="rgfname" [(ngModel)]="userDetail.fname" onkeypress="return /[a-z]/i.test(event.key)">
+       <span *ngIf="fname.invalid && fname.touched" class="error">First Name is required</span>
+ 
+     </div>
+       <div class="form-group">
+       <label for="name"><b><i>Last Name:</i></b></label>
+       <input required #lname="ngModel" type="text" class="form-control " id="name" name="rglname" [(ngModel)]="userDetail.lname" onkeypress="return /[a-z]/i.test(event.key)">
+       <span *ngIf="lname.invalid && lname.touched" class="error">Last Name is required</span>
+     </div>
+ 
+     <div class="form-group">
+       <label for="lblgender"><b><i>Gender</i></b> </label> <br/>
+       <div class="form-check-inline">
+       
+       <label class="form-check-label" for="lblrdmale"> <b><i>Male</i></b> </label>
+       <input class="form-check-input radio-margin" type="radio" name="gender" id="lblgender" value="Male" [(ngModel)]="userDetail.gender" checked> 
+     
+       <label class="form-check-label radio-margin" for="lblrdfemale"> <b><i>Female</i></b> </label>
+       <input class="form-check-input radio-margin" type="radio" name="gender" id="lblgender" value="Female" [(ngModel)]="userDetail.gender"> 
+ </div>
+ </div>
     
-      <label class="form-check-label radio-margin" for="lblrdfemale"> <b><i>Female</i></b> </label>
-      <input class="form-check-input radio-margin" type="radio" name="gender" id="lblgender" value="Female" [(ngModel)]="userDetail.gender"> 
-</div>
-</div>
+     <div class="form-group">
+       <label for="email"><b><i>Email address:</i></b></label>
+       <input required #email="ngModel" type="email" class="form-control " id="email" name="rgmail" [(ngModel)]="userDetail.email" emailPattern = "^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" >
+       
+       <span *ngIf="email.invalid && email.touched" class="error">E-mail is required</span>
+     </div>
+     
+     <div class="form-group">
+       <label for="pwd"><b><i>Password:</i></b></label>
+       <input required #password="ngModel" type="password" class="form-control " id="pwd" name="rgpwd" [(ngModel)]="userDetail.password" >
+       <span *ngIf="password.invalid && password.touched" class="error">Password is required</span>
+     </div>
    
-    <div class="form-group">
-      <label for="email"><b><i>Email address:</i></b></label>
-      <input type="email" class="form-control " id="email" name="rgmail" [(ngModel)]="userDetail.email" >
-    </div>
-    
-    <div class="form-group">
-      <label for="pwd"><b><i>Password:</i></b></label>
-      <input type="password" class="form-control " id="pwd" name="rgpwd" [(ngModel)]="userDetail.password" >
-    </div>
-  
-    <div class="form-group">
-      <label for="phone"><b><i>Contact No.:</i></b></label>
-      <input type="number" class="form-control " id="phone" name="rgphone" [(ngModel)]="userDetail.phone" >
-    </div>
-
-    <div class="form-group">
-    <button type="submit" (click)="newUser()" class="btn btn-primary" style="display: grid;margin: auto;">Submit</button>
-  </div>
-  <br>
-  
-    <a routerLink="/login"><b><i>Login</i></b></a>
-
-  </div>
-</div>
+     <div class="form-group">
+       <label for="phone"><b><i>Contact No.:</i></b></label>
+       <input required #contactNo="ngModel" type="tel" class="form-control " id="phone" name="rgphone" [(ngModel)]="userDetail.phone" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" onkeypress="return /[0-9]/i.test(event.key)" maxlength="10" >
+       <span *ngIf="contactNo.invalid && contactNo.touched" class="error">Contact No. is required OR number Should be 10 digit valid number</span>
+     </div>
+ 
+     <div class="form-group">
+     <button type="submit" (click)="newUser()" class="btn btn-primary" style="display: grid;margin: auto;">Submit</button>
+   </div>
+   Already a User ?
+     <a routerLink="/login" style="padding-left: 10px;"><b><i>Login</i></b></a>
+   
+   </form>
+   <br><br>
+ </div>

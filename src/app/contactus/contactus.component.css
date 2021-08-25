@@ -1,7 +1,6 @@
 .cbg{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) !important;
-     background-size: cover;
-     background-position: center;
+     background-color: midnightblue;
+     color: white;
   }
   .qte{
     text-align: center;
@@ -15,10 +14,6 @@
   }
   .adrs li i{
     font-size: 20px;
-  }
-  .footercolor{
-    background-color: midnightblue;
-    color: white;
   }
 
 

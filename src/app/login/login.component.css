@@ -1,22 +1,23 @@
 .formpg{
-    width:300px; 
-    margin: auto;
-    display: block;
-    border-radius: 10%;
-    background-color: rgb(0,0,0);
-    padding-left: 30px;
-    padding-right: 30px;
-  }
+  width:300px; 
+  margin: auto;
+  display: block;
+  border-radius: 10%;
+  background-color: rgb(0,0,0);
+  padding-left: 30px;
+  padding-right: 30px;
+  box-shadow:5px 10px 18px red;
+}
 
-  #im1{
-    width:50%; 
-    height:50%; 
-    border-radius:50%;
-    margin: auto;
-    display: block;
+#im1{
+  width:50%; 
+  height:50%; 
+  border-radius:50%;
+  margin: auto;
+  display: block;
 }
 
 .font-color{
-  color: white;
-  font-weight: bold;
+color: white;
+font-weight: bold;
 }

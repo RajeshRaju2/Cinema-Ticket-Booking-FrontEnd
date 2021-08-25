@@ -1,0 +1,25 @@
+.left{
+    
+    float:left;
+    width: 49%;
+    padding:1px;
+}
+.right{
+    
+    float:right;
+    width:49%;
+    padding: 1px;
+}
+
+.body{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("src\assets\images\mov.jpg");
+    background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: floralwhite;
+  padding-bottom: 150px;
+}
+
+.field{
+    background-color: lightskyblue;
+}

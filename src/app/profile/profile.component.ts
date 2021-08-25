@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { UserserviceService } from '../userservice.service';
 
 
@@ -8,14 +9,20 @@ import { UserserviceService } from '../userservice.service';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-newResult:any={};
-  constructor(private service:UserserviceService) { }
+getUser:any={};
+allUsers:any=[];
+
+  constructor(private service:UserserviceService,private router:Router) { }
 
   ngOnInit(): void {
-this.service.$isLoggedIn.subscribe(data=>(this.newResult=data));
+this.service.getLoginUser().subscribe(data=>(this.getUser=data));
   }
+
 updateUser(){
-  console.log(this.newResult);
-  
+
+ this.service.updateUser(this.getUser).subscribe(data=>(this.allUsers=data));
+ window.alert("Profile Updated Successfully !!!") ;
+ this.router.navigate(['/profile']);
+
 }
 }

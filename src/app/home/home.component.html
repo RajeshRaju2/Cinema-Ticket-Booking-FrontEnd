@@ -1,15 +1,8 @@
 <header></header>
-
 <main role="main">
     <div>
-            <section class="jumbotron text-center"  style="background-color: #9e9e9e;">
-                <div class="container">
-                    <h1 class="jumbotron-heading" style="color:  #800020;">Need to book seat for you and your partner ?</h1>
-                    <p class="lead text-muted">Click here to grab your seat as soon as possible to find some space for you and your love partner .!.</p>
-                    <p>
-                        <a href="#" class="btn my-2" style="background-color: #343a40;color: white;">Book your Seat</a>
-                    </p>
-                </div>
+            <section class="jumbotron text-center"  style="background-image: url(./assets/images/cinema-hall.jpg);height: 320px;">
+            
             </section>
         </div>
     
@@ -21,10 +14,16 @@
                             <div class="card mb-4 box-shadow">
                                 <img class="card-img-top" src="assets/images/img1.jpg" alt="Card image cap">
                                 <div class="card-body">
-                                    <p class="card-text">This is a wider card with supporting text below as a natural
-                                        lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text">Tiger Zinda Hai is a 2017 Indian action thriller espionage film directed by Ali Abbas Zafar and co-written with Neelesh Misra.</p>
                                     <div class="d-flex justify-content-between align-items-center">
-                                        <button class="btn" style="background-color: #343a40;color: white;">Book Ticket</button>
+                                        <ng-container *ngIf="isLoggedIn; else newButton">
+                                            <button class="btn" type="submit" (click)=book1()  style="background-color: #343a40;color: white;">Book</button>
+                                              </ng-container>
+                                              <ng-template #newButton>
+                                                <button class="btn" style="background-color: #343a40">
+                                                    <a routerLink="/login" style="text-decoration: none;color: white;">Book Ticket</a>
+                                                </button>
+                                        </ng-template>
                                         <small class="text-muted">3 hrs</small>
                                     </div>
                                 </div>
@@ -34,10 +33,17 @@
                             <div class="card mb-4 box-shadow">
                                 <img class="card-img-top" src="assets/images/img2.jpg" alt="Card image cap">
                                 <div class="card-body">
-                                    <p class="card-text">This is a wider card with supporting text below as a natural
-                                        lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text">2.0 is a 2018 Indian Tamil-language science fiction action film written and directed by S. 
+                                        Shankar, and co-written by B. Jeyamohan.</p>
                                     <div class="d-flex justify-content-between align-items-center">
-                                        <button class="btn" style="background-color: #343a40;color: white;">Book Ticket</button>
+                                        <ng-container *ngIf="isLoggedIn; else newButton">
+                                            <button class="btn" type="submit" (click)=book2()  style="background-color: #343a40;color: white;">Book</button>
+                                              </ng-container>
+                                              <ng-template #newButton>
+                                                <button class="btn" style="background-color: #343a40">
+                                                    <a routerLink="/login" style="text-decoration: none;color: white;">Book Ticket</a>
+                                                </button>
+                                        </ng-template>
                                         <small class="text-muted">3 hrs</small>
                                     </div>
                                 </div>
@@ -47,10 +53,16 @@
                             <div class="card mb-4 box-shadow">
                                 <img class="card-img-top" src="assets/images/img3.jpg" alt="Card image cap">
                                 <div class="card-body">
-                                    <p class="card-text">This is a wider card with supporting text below as a natural
-                                        lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text">Baazaar is a 2018 Indian Hindi-language thriller drama film directed by Gauravv K. </p>
                                     <div class="d-flex justify-content-between align-items-center">
-                                        <button class="btn" style="background-color: #343a40;color: white;">Book Ticket</button>
+                                        <ng-container *ngIf="isLoggedIn; else newButton">
+                                            <button class="btn" type="submit" (click)=book3()  style="background-color: #343a40;color: white;">Book</button>
+                                              </ng-container>
+                                              <ng-template #newButton>
+                                                <button class="btn" style="background-color: #343a40">
+                                                    <a routerLink="/login" style="text-decoration: none;color: white;">Book Ticket</a>
+                                                </button>
+                                        </ng-template>
                                         <small class="text-muted">3 hrs</small>
                                     </div>
                                 </div>
@@ -61,10 +73,16 @@
                             <div class="card mb-4 box-shadow">
                                 <img class="card-img-top" src="assets/images/img4.jpg" alt="Card image cap">
                                 <div class="card-body">
-                                    <p class="card-text">This is a wider card with supporting text below as a natural
-                                        lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text">Bloodshot is a 2020 American superhero film based on the Valiant Comics character of the same name.</p>
                                     <div class="d-flex justify-content-between align-items-center">
-                                        <button class="btn" style="background-color: #343a40;color: white;">Book Ticket</button>
+                                        <ng-container *ngIf="isLoggedIn; else newButton">
+                                            <button class="btn" type="submit" (click)=book4()  style="background-color: #343a40;color: white;">Book</button>
+                                              </ng-container>
+                                              <ng-template #newButton>
+                                                <button class="btn" style="background-color: #343a40">
+                                                    <a routerLink="/login" style="text-decoration: none;color: white;">Book Ticket</a>
+                                                </button>
+                                        </ng-template>
                                         <small class="text-muted">3 hrs</small>
                                     </div>
                                 </div>
@@ -74,10 +92,16 @@
                             <div class="card mb-4 box-shadow">
                                 <img class="card-img-top" src="assets/images/img5.jpg" alt="Card image cap">
                                 <div class="card-body">
-                                    <p class="card-text">This is a wider card with supporting text below as a natural
-                                        lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text">Crisis is a 2021 crime thriller film written, produced and directed by Nicholas Jarecki. </p>
                                     <div class="d-flex justify-content-between align-items-center">
-                                        <button class="btn" style="background-color: #343a40;color: white;">Book Ticket</button>
+                                        <ng-container *ngIf="isLoggedIn; else newButton">
+                                            <button class="btn" type="submit" (click)=book5()  style="background-color: #343a40;color: white;">Book</button>
+                                              </ng-container>
+                                              <ng-template #newButton>
+                                                <button class="btn" style="background-color: #343a40">
+                                                    <a routerLink="/login" style="text-decoration: none;color: white;">Book Ticket</a>
+                                                </button>
+                                        </ng-template>
                                         <small class="text-muted">3 hrs</small>
                                     </div>
                                 </div>
@@ -87,10 +111,17 @@
                             <div class="card mb-4 box-shadow">
                                 <img class="card-img-top" src="assets/images/img6.jpg" alt="Card image cap">
                                 <div class="card-body">
-                                    <p class="card-text">This is a wider card with supporting text below as a natural
-                                        lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text">Joker is a 2019 American psychological thriller film based on the DC Comics character of the same name. 
+                                        Directed and produced by Todd Phillip.</p>
                                     <div class="d-flex justify-content-between align-items-center">
-                                        <button class="btn" style="background-color: #343a40;color: white;">Book Ticket</button>
+                                        <ng-container *ngIf="isLoggedIn; else newButton">
+                                            <button class="btn" type="submit" (click)=book6()  style="background-color: #343a40;color: white;">Book</button>
+                                              </ng-container>
+                                              <ng-template #newButton>
+                                                <button class="btn" style="background-color: #343a40">
+                                                    <a routerLink="/login" style="text-decoration: none;color: white;">Book Ticket</a>
+                                                </button>
+                                        </ng-template>
                                         <small class="text-muted">3 hrs</small>
                                     </div>
                                 </div>
@@ -104,7 +135,14 @@
                                     <p class="card-text">This is a wider card with supporting text below as a natural
                                         lead-in to additional content. This content is a little bit longer.</p>
                                     <div class="d-flex justify-content-between align-items-center">
-                                        <button class="btn" style="background-color: #343a40;color: white;">Book Ticket</button>
+                                        <ng-container *ngIf="isLoggedIn; else newButton">
+                                            <button class="btn" type="submit" (click)=book7()  style="background-color: #343a40;color: white;">Book</button>
+                                              </ng-container>
+                                              <ng-template #newButton>
+                                                <button class="btn" style="background-color: #343a40">
+                                                    <a routerLink="/login" style="text-decoration: none;color: white;">Book Ticket</a>
+                                                </button>
+                                        </ng-template>
                                         <small class="text-muted">3 hrs</small>
                                     </div>
                                 </div>
@@ -114,10 +152,16 @@
                             <div class="card mb-4 box-shadow">
                                 <img class="card-img-top" src="assets/images/img8.jpg" alt="Card image cap">
                                 <div class="card-body">
-                                    <p class="card-text">This is a wider card with supporting text below as a natural
-                                        lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text">Master is a 2021 Indian Tamil-language action thriller film written and directed by Lokesh Kanagaraj. Produced by Xavier Britto.</p>
                                     <div class="d-flex justify-content-between align-items-center">
-                                        <button class="btn" style="background-color: #343a40;color: white;">Book Ticket</button>
+                                        <ng-container *ngIf="isLoggedIn; else newButton">
+                                            <button class="btn" type="submit" (click)=book8()  style="background-color: #343a40;color: white;">Book</button>
+                                              </ng-container>
+                                              <ng-template #newButton>
+                                                <button class="btn" style="background-color: #343a40">
+                                                    <a routerLink="/login" style="text-decoration: none;color: white;">Book Ticket</a>
+                                                </button>
+                                        </ng-template>
                                         <small class="text-muted">3 hrs</small>
                                     </div>
                                 </div>
@@ -127,10 +171,16 @@
                             <div class="card mb-4 box-shadow">
                                 <img class="card-img-top" src="assets/images/img9.jpg" alt="Card image cap">
                                 <div class="card-body">
-                                    <p class="card-text">This is a wider card with supporting text below as a natural
-                                        lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text">NGK (an abbreviation for Nandha Gopalan Kumaran) is a 2019 Indian Tamil-language political action film written and directed by Selvaraghavan.</p>
                                     <div class="d-flex justify-content-between align-items-center">
-                                        <button class="btn" style="background-color: #343a40;color: white;">Book Ticket</button>
+                                        <ng-container *ngIf="isLoggedIn; else newButton">
+                                            <button class="btn" type="submit" (click)=book9()  style="background-color: #343a40;color: white;">Book</button>
+                                              </ng-container>
+                                              <ng-template #newButton>
+                                                <button class="btn" style="background-color: #343a40">
+                                                    <a routerLink="/login" style="text-decoration: none;color: white;">Book Ticket</a>
+                                                </button>
+                                        </ng-template>
                                         <small class="text-muted">3 hrs</small>
                                     </div>
                                 </div>

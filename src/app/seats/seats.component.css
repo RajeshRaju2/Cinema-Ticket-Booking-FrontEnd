@@ -99,9 +99,11 @@ input[type=checkbox]:checked{
 }
 
 .cinemabgcolor{
-  background-color:#474440;
+  background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(src\assets\images\newseat.jpg) !important;
+  background-size: cover;
+  /* background-position: center;  */
   color: white;
-  padding-left: 275px;
+  padding-left: 300px;
   padding-top: 50px;
 }
 

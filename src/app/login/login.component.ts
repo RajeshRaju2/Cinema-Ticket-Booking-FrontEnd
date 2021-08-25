@@ -9,10 +9,10 @@ import { UserserviceService } from '../userservice.service';
 })
 export class LoginComponent implements OnInit {
 
-public logcred:any = {email:'',password:''};
-msg='';
-checking:any = {email:'',password:''};
-
+public logCredential:any = {email:'',password:''};
+message='';
+loggedUser:any = {email: '', password: ''};
+isLoggedIn:any = false;
 
   constructor(public router:Router,public aroute:ActivatedRoute,public service:UserserviceService) { }
 
@@ -22,17 +22,18 @@ checking:any = {email:'',password:''};
 
   validateUser(){
 
-this.service.validateUser(this.logcred).subscribe(data=>(this.checking=data));
+this.service.validateUser(this.logCredential.email,this.logCredential.password).subscribe(data=>(this.loggedUser=data));
 
-    if(this.checking.email == ""  &&  this.checking.password == "" ){
+    if(this.loggedUser.email == ""  &&  this.loggedUser.password == "" ){
       this.router.navigate(['/login']);
-     this.msg="Invalid Username or Password";
+     this.message="Invalid Username or Password";
     }else{
       this.router.navigate(['/home']);
-      
+      this.isLoggedIn=true;
     }
-    console.log(this.checking);
-    this.service.logIn(this.checking);
+    console.log(this.loggedUser);
+    this.service.loginUser(this.loggedUser);
+    this.service.loginConfirmation(this.isLoggedIn);
   }
   
 }

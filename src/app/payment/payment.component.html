@@ -1,1 +1,60 @@
-<p>payment works!</p>
+<div class="body" > 
+
+    <h1 style="text-align: center;padding-top: 25px;"><b><i>Payment Details</i></b></h1>
+
+<div class="row">
+    <div class="left">
+        <img src="assets/images/creditcard.png" alt="pro" style="width:500px;height: 500px;">
+    </div>
+    <div class="right">
+        <form>
+  
+
+  
+          <label><b><h3 style="margin-top: 40px;">Credit Card Number</h3></b></label><br>
+          <input class="field" id="cardnumber" type=text pattern="[0-9]{13,16}" name="cardnumber" requierd="true" placeholder="0123-4567-8901-2345"> <br>
+          <br>
+          <label><b><h3>Card Holder Name</h3></b></label><br>
+         <input class="field" id="cardholder" type="text" name="name" requierd="true" maxlength="50" placeholder="Cardholder"> <br>
+          <br>
+          <label><b><h3>Expiration Date</h3></b></label><br>
+          <div>
+          <select name="month" id="month" onchange="" size="1">
+            <option value="00">MM</option>
+            <option value="01">01</option>
+            <option value="02">02</option>
+            <option value="03">03</option>
+            <option value="04">04</option>
+            <option value="05">05</option>
+            <option value="06">06</option>
+            <option value="07">07</option>
+            <option value="08">08</option>
+            <option value="09">09</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+          </select>
+      
+          <select name="year" id="year" onchange="" size="1">
+            <option value="00">YY</option>
+            <option value="01">21</option>
+            <option value="02">22</option>
+            <option value="03">23</option>
+            <option value="04">24</option>
+            <option value="05">25</option>
+            <option value="06">26</option>
+            <option value="07">27</option>
+            <option value="08">28</option>
+            <option value="09">29</option>
+            <option value="10">30</option>
+          </select>
+          </div>
+          <br>
+          <label id="cvc-label"><b>CVC/CVV</b></label> <br>
+          <input class="field" id="cvc" type="text" placeholder="Cvc/Cvv" maxlength="3" /><br><br>
+
+          <button class="btn btn-primary" type="submit" (click)="purchased()" name="purchase" >CONFIRM</button>
+        </form>
+    </div>
+</div>
+

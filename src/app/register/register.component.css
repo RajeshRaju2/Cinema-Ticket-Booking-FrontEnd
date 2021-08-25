@@ -1,22 +1,25 @@
-
-  .reg{
-    width:400px; 
-    margin: auto;
-    display: block;
-    background-color: black;
-    padding: 30px;
-  }
-
-.fontcolor{
-  color: white;
+.reg{
+  width:400px; 
+  margin: auto;
+  display: block;
+  background-color: black;
+  padding: 30px;
+  color:white;
+  border-radius: 10%;
+  box-shadow:5px 10px 18px red;
 }
-  .margin{
-    padding-left: 500px;
-    padding-right: 504px;
-    margin-top: 50px;
-  }
- 
-  .radio-margin{
-    margin-left: 7px;
-  }
-  
+
+.radio-margin{
+  margin-left: 7px;
+}
+input.ng-invalid{
+  border: 2px solid red;
+  border-left: 5px solid red;
+  border-right: 5px solid red;
+}
+input.ng-valid{
+  border: 2px solid green;
+}
+.error{
+  color: red;
+}

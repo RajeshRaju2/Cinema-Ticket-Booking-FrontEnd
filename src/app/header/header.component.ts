@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { UserserviceService } from '../userservice.service';
 
 @Component({
   selector: 'header',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  isLoggedIn:any = false;
+  temp:any=false;
+
+  constructor(private service:UserserviceService,private router:Router) { }
 
   ngOnInit(): void {
+  this.service.getLoginConfirmation().subscribe(data=>(this.isLoggedIn=data));
+  console.log(this.isLoggedIn);
+  }
+  
+  loggedOut(){
+    // this.service.loginConfirmation(this.temp);
+    this.router.navigate(['/home']);
   }
 
 }
