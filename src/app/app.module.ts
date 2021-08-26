@@ -20,6 +20,8 @@ import { PaymentComponent } from './payment/payment.component';
 import { BookingDetailsComponent } from './booking-details/booking-details.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { TicketsComponent } from './tickets/tickets.component';
+import { AddMovieComponent } from './add-movie/add-movie.component';
+import { UpdateMovieComponent } from './update-movie/update-movie.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { TicketsComponent } from './tickets/tickets.component';
     PaymentComponent,
     BookingDetailsComponent,
     AdminLoginComponent,
-    TicketsComponent
+    TicketsComponent,
+    AddMovieComponent,
+    UpdateMovieComponent
   ],
   imports: [
     BrowserModule,

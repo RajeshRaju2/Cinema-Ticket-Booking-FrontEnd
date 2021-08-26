@@ -1,6 +1,10 @@
-<div class="ticket">
+<div *ngIf="!status" style="text-align:center;margin:auto">
+    <h1><b><i>*Sorry you have no Tickets*</i></b></h1>
+</div>
+<div class="ticket" *ngIf="status">
     <div class="box">
 MovieName: {{bookingDetails.movieName}}
+<br>
 Language: {{bookingDetails.language}}
 <br>
 ShowDate: {{bookingDetails.showDate}}
@@ -10,6 +14,7 @@ StartTime: {{bookingDetails.startTime}}
 No of seats Selected: {{bookingDetails.no_ofseatNameSelected}}
 <br>
 Seats: {{seats}}
+<br>
 Amount: {{bookingDetails.amount}}
 </div>
 </div>

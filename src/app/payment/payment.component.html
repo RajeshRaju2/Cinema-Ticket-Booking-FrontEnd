@@ -12,10 +12,10 @@
 
   
           <label><b><h3 style="margin-top: 40px;">Credit Card Number</h3></b></label><br>
-          <input class="field" id="cardnumber" type=text pattern="[0-9]{13,16}" name="cardnumber" requierd="true" placeholder="0123-4567-8901-2345"> <br>
+          <input class="field" id="cardnumber" type=text pattern="[0-9]{13,16}" name="cardnumber" requierd="true" placeholder="0123-4567-8901-2345" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" onkeypress="return /[0-9]/i.test(event.key)" maxlength="16"> <br>
           <br>
           <label><b><h3>Card Holder Name</h3></b></label><br>
-         <input class="field" id="cardholder" type="text" name="name" requierd="true" maxlength="50" placeholder="Cardholder"> <br>
+         <input class="field" id="cardholder" type="text" name="name" requierd="true" maxlength="50" placeholder="Cardholder" onkeypress="return /[a-z]/i.test(event.key)"> <br>
           <br>
           <label><b><h3>Expiration Date</h3></b></label><br>
           <div>
@@ -51,7 +51,7 @@
           </div>
           <br>
           <label id="cvc-label"><b>CVC/CVV</b></label> <br>
-          <input class="field" id="cvc" type="text" placeholder="Cvc/Cvv" maxlength="3" /><br><br>
+          <input class="field" id="cvc" type="text" placeholder="Cvc/Cvv" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" onkeypress="return /[0-9]/i.test(event.key)" maxlength="3" /><br><br>
 
           <button class="btn btn-primary" type="submit" (click)="purchased()" name="purchase" >CONFIRM</button>
         </form>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AdminService } from '../admin.service';
 import { UserserviceService } from '../userservice.service';
 
 @Component({
@@ -11,16 +12,75 @@ export class HomeComponent implements OnInit {
   
   isLoggedIn:any = false;
   temp:any=false;
+  isShow1:any=false;
+  isShow2:any=false;
+  isShow3:any=false;
+  isShow4:any=false;
+  isShow5:any=false;
+  isShow6:any=false;
+  isShow7:any=false;
+  isShow8:any=false;
+  isShow9:any=false;
   detail:any={movie:"",img:"",language:""};
+  movieDetails:any={};
+movieInfo:any=false;
 
 
-
-  constructor(private service:UserserviceService,private router:Router) { }
+  constructor(private service:UserserviceService,private router:Router,private adminService:AdminService) { }
 
   ngOnInit(): void {
   this.service.getLoginConfirmation().subscribe(data=>(this.isLoggedIn=data));
   console.log(this.isLoggedIn);
+  this.adminService.getAdminInfo().subscribe(data=>(this.temp=data));
+  this.adminService.getmovieDetails().subscribe(data=>(this.movieDetails=data));
+  console.log(this.movieDetails);
+  
+  if(Object.keys(this.movieDetails).length === 0){
+            this.movieInfo=this.movieInfo;
+            console.log(this.movieInfo);
+            
+  }else{
+      this.movieInfo=!this.movieInfo;
+      // console.log(this.movieInfo);
+      
   }
+  }
+
+  updateMovie(){
+    this.adminService.setMovie(this.movieDetails);
+    this.router.navigate(['/add-movie']);
+  }
+
+toggle1(){
+  this.isShow1 = !this.isShow1;
+}
+toggle2(){
+  this.isShow2 = !this.isShow2;
+}
+toggle3(){
+  this.isShow3 = !this.isShow3;
+}
+toggle4(){
+  this.isShow4 = !this.isShow4;
+}
+toggle5(){
+  this.isShow5 = !this.isShow5;
+}
+toggle6(){
+  this.isShow6 = !this.isShow6;
+}
+toggle7(){
+  this.isShow7 = !this.isShow7;
+}
+toggle8(){
+  this.isShow8 = !this.isShow8;
+}
+toggle9(){
+  this.isShow9 = !this.isShow9;
+}
+toggle10(){
+  this.movieInfo=!this.movieInfo;
+}
 
   book1(){
     this.detail.movie="Tiger Zinda Hai";

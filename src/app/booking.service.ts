@@ -11,6 +11,7 @@ export class BookingService {
   private resturl: string = 'http://localhost:8080/cinematicket/booking';
 bookingDetails:any={};
 seats:any=[];
+status:any=false;
 
   constructor(private http: HttpClient) {}
   
@@ -41,6 +42,13 @@ seats:any=[];
 
     getSeats():Observable<any[]>{
       return of(this.seats);
+    }
+
+    bookingStatus(status:any){
+      this.status=status;
+    }
+    getbookingStatus():Observable<any>{
+      return of(this.status);
     }
 
     handleError(err: { error: { message: string; }; status: any; message: any; }) {

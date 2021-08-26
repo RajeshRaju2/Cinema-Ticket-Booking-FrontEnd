@@ -12,6 +12,7 @@ import { PaymentComponent } from './payment/payment.component';
 import { BookingComponent } from './booking/booking.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { TicketsComponent } from './tickets/tickets.component';
+import { AddMovieComponent } from './add-movie/add-movie.component';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
@@ -25,7 +26,8 @@ const routes: Routes = [
   {path:'payment',component:PaymentComponent},
   {path:'booking',component:BookingComponent},
   {path:'admin-login',component:AdminLoginComponent},
-  {path:'tickets',component:TicketsComponent}
+  {path:'tickets',component:TicketsComponent},
+  {path:'add-movie',component:AddMovieComponent}
 ];
 
 @NgModule({

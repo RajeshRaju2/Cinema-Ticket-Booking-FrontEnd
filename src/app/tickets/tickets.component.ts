@@ -10,12 +10,13 @@ import { BookingService } from '../booking.service';
 export class TicketsComponent implements OnInit {
 bookingDetails:any={};
 seats:any=[];
-
+status:any=false;
   constructor(private bookingService:BookingService,private router:Router) { }
 
   ngOnInit(): void {
     this.bookingService.getBookingDetails().subscribe(data=>(this.bookingDetails=data));
     this.bookingService.getSeats().subscribe(data=>(this.seats=data));
+    this.bookingService.getbookingStatus().subscribe(data=>(this.status=data));
   }
 
 

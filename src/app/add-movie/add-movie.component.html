@@ -1,0 +1,50 @@
+<div class="adding" *ngIf="!flag">
+<h1 style="text-align: center;padding-bottom: 18px;"><b><i>Add Movie</i></b></h1>
+<form>
+    <div class="form-group">
+      <label for="movieName">Movie Name</label>
+      <input type="text" class="form-control" id="movieName" name="movieName" placeholder="Enter your movie name" [(ngModel)]="movieDetails.movieName">
+ </div>
+ <div class="form-group">
+    <label for="language">Language</label>
+    <input type="text" class="form-control" id="language" name="language" placeholder="Enter Language" [(ngModel)]="movieDetails.language">
+</div>
+<div class="form-group">
+    <label for="amount">Amount</label>
+    <input type="number" class="form-control" id="amount" name="amount"placeholder="Enter Amount" [(ngModel)]="movieDetails.amount">
+</div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea class="form-control" id="description" name="description" rows="3" [(ngModel)]="movieDetails.description"></textarea>
+    </div>
+    <div class="form-group">
+        <button class="btn btn-secondary" type="submit" (click)="addMovie()">Add Movie</button>
+    </div>
+  </form>
+</div>
+
+
+<div class="adding" *ngIf="flag">
+    <h1  style="text-align: center;padding-bottom: 18px;"><b><i>Update Movie</i></b></h1>
+    <form>
+        <div class="form-group">
+          <label for="movieName">Movie Name</label>
+          <input type="text" class="form-control" id="movieName" name="movieName"  [(ngModel)]="movDet.movieName">
+     </div>
+     <div class="form-group">
+        <label for="language">Language</label>
+        <input type="text" class="form-control" id="language" name="language"  [(ngModel)]="movDet.language">
+    </div>
+    <div class="form-group">
+        <label for="amount">Amount</label>
+        <input type="number" class="form-control" id="amount" name="amount" [(ngModel)]="movDet.amount">
+    </div>
+        <div class="form-group">
+          <label for="description">Description</label>
+          <textarea class="form-control" id="description" name="description" rows="3" [(ngModel)]="movDet.description"></textarea>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-secondary" type="submit" (click)="update()">Update Movie</button>
+        </div>
+      </form>
+    </div>

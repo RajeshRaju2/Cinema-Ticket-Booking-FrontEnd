@@ -11,6 +11,7 @@ import { UserserviceService } from '../userservice.service';
 export class BookingComponent implements OnInit {
 details:any={};
 nos:number=0;
+bookingStatus:any=false;
 public bookingDetails:any={
   movieName:'',
   language:'',
@@ -35,7 +36,8 @@ public bookingDetails:any={
          this.router.navigate(['/seats']);});
          console.log(this.bookingDetails);
          this.bookingService.saveBookingDetails(this.bookingDetails);
-         
+         this.bookingStatus=true;
+         this.bookingService.bookingStatus(this.bookingStatus);
   }
 
 }

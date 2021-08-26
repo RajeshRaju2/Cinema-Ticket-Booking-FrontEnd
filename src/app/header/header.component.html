@@ -10,7 +10,7 @@
                 <li class="nav-item">
                     <a class="nav-link" routerLink="/home" routerLinkActive="active">Home </a>
                 </li>
-                <li class="nav-item" *ngIf="!isLoggedIn">
+                <li class="nav-item" *ngIf="!isLoggedIn && !isAdminLogged">
                     <a class="nav-link" routerLink="/register" >Register</a>
                 </li>
               
@@ -18,7 +18,7 @@
                     <a class="nav-link" routerLink="/contactus" routerLinkActive="active">Contact us</a>
                 </li>
              
-                    <li class="nav-item" *ngIf="!isLoggedIn">
+                    <li class="nav-item" *ngIf="!isLoggedIn && !isAdminLogged">
                         <a class="nav-link" routerLink="/login" >Log in</a>
                     </li>
 
@@ -30,20 +30,23 @@
                         <a class="nav-link" routerLink="/tickets" routerLinkActive="active">My Tickets</a>
                     </li>
 
-                    <li class="nav-item" *ngIf="isLoggedIn">
-                        <a class="nav-link" href="#" >Log Out</a>
-                    </li>
-
-                    <li class="nav-item" *ngIf="!isLoggedIn">
+                    <li class="nav-item" *ngIf="!isLoggedIn && !isAdminLogged">
                         <a class="nav-link" routerLink="/admin-login" routerLinkActive="active">Admin</a>
                     </li>
+  
+                    <<li class="nav-item" *ngIf="isAdminLogged">
+                        <a class="nav-link" routerLink="/add-movie" >Add Movie</a>
+                    </li> 
 
+                    <li class="nav-item" *ngIf="isLoggedIn || isAdminLogged">
+                        <a class="nav-link" href="">Log Out</a>
+                    </li>
                    
             </ul>
-            <form class="form-inline mt-2 mt-md-0">
+            <!-- <form class="form-inline mt-2 mt-md-0">
                 <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
+            </form> -->
         </div>
     </nav>
 

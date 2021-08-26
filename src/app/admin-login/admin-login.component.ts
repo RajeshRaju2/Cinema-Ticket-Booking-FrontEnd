@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AdminService } from '../admin.service';
 
 @Component({
   selector: 'admin-login',
@@ -13,7 +14,7 @@ password:any="";
 adminLogged:any=false;
 message:any="";
 
-  constructor(private router:Router) { }
+  constructor(private router:Router,private adminService:AdminService) { }
 
   ngOnInit(): void {
   }
@@ -22,6 +23,7 @@ message:any="";
     if(this.email == "rdn025@gmail.com"  &&  this.password == "boss" ){
       this.router.navigate(['/home']);
       this.adminLogged=true;
+      this.adminService.adminInfo(this.adminLogged);
       
     }else{
       this.router.navigate(['/admin-login']);
